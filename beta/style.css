@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+
+/* Global Styles */
+
+body, html {
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  font-family: 'Lato', sans-serif;
+}
+
+.top-bar {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.top-bar a {
+ 
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0px 17px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.top-bar a:hover {
+  background-color: #333;
+  color: black;
+}
+
+.top-bar .logo {
+  font-weight: bold;
+  font-family: Lalezar;
+  font-size: 25px;
+}
+
+.content {
+  padding-top: 60px;
+}
+
+.parallax1 {
+  background-image: url('assets/background.jpeg');
+  height: 200%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  background-image: url('assets/background2.jpeg');
+  height: 200%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contact {
+  background-color: brown;
+  height: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+#closebtn {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  transform: translateY(-100%);
+  margin-right: 2%;
+}
+
+/* Media Queries */
+
+/* For screens with a maximum width of 768px (tablets and smaller) */
+@media only screen and (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-bar a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .parallax1, .parallax2 {
+    height: 100%;
+  }
+
+  #contact {
+    height: 100%;
+  }
+
+  .overlay-content {
+    top: 15%;
+  }
+
+  .overlay a {
+    font-size: 24px;
+  }
+}
+
+/* For screens with a maximum width of 480px (mobile devices) */
+@media only screen and (max-width: 480px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-bar a {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .parallax1, .parallax2 {
+    height: 100%;
+  }
+
+  #contact {
+    height: 100%;
+  }
+
+  .overlay-content {
+    top: 10%;
+  }
+
+  .overlay a {
+    font-size: 18px;
+  }
+}
+
+/* For screens with a maximum width of 320px (smaller mobile devices) */
+@media only screen and (max-width: 320px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-bar a {
+    padding: 2px;
+    font-size: 10px;
+  }
+
+  .parallax1, .parallax2 {
+    height: 100%;
+  }
+
+  #contact {
+    height: 100%;
+  }
+
+  .overlay-content {
+    top: 5%;
+  }
+
+  .overlay a {
+    font-size: 14px;
+  }
+}
+
+/* For screens with a maximum width of 240px (very small mobile devices) */
+@media only screen and (max-width: 240px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-bar a {
+    padding: 1px;
+    font-size: 8px;
+  }
+
+  .parallax1, .parallax2 {
+    height: 100%;
+  }
+
+  #contact {
+    height: 100%;
+  }
+
+  .overlay-content {
+    top: 5%;
+  }
+
+  .overlay a {
+    font-size: 12px;
+  }
+}
